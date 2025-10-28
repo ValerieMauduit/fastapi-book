@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 import uvicorn
-from web import explorer
+from web import explorer, creature
 
 app = FastAPI()
 app.include_router(explorer.router)
+app.include_router(creature.router)
 
 
 @app.get("/")

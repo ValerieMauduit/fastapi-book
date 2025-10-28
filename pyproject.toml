@@ -16,6 +16,7 @@ line-length = 100
 
 [tool.poetry]
 package-mode = false
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
