@@ -28,3 +28,9 @@ Suivi des sous-pages en fonction du besoin.
 ### Interface de tests manuels de FastAPI
 
 Dans un browser, taper: `http://localhost:8000/docs`
+
+## Tests automatiques
+
+```commandline
+pytest -v test/unit/service/test_creature.py
+```
