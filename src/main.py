@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 
 app = FastAPI()
 
@@ -8,7 +9,10 @@ def top():
     return "top here"
 
 
-if __name__ == "__main__":
-    import uvicorn
+@app.get("/echo/{thing}")
+def echo(thing):
+    return f"Echoing {thing}"
 
+
+if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)
